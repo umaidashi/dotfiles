@@ -19,7 +19,6 @@ return {
       colorscheme = "tokyonight",
     },
   },
-
   -- change trouble config
   {
     "folke/trouble.nvim",
