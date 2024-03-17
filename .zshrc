@@ -1,5 +1,12 @@
-PROMPT='%F{cyan}%h %~ %T
->%f '
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# PROMPT='%F{cyan}%h %~ %T
+# >%f '
 
 
 alias repo='(){cd ~/documents/github/$1}'
@@ -61,8 +68,6 @@ alias cn='norminette -R CheckForbiddenSourceHeader'
 export USER=yoishi
 export MAIL=yoishi@student.42tokyo.jp
 
-
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -74,9 +79,6 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# spaceship
-source /opt/homebrew/opt/spaceship/spaceship.zsh
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -99,6 +101,10 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust \
     zsh-users/zsh-syntax-highlighting \
-    zsh-users/zsh-autosuggestions
+    zsh-users/zsh-autosuggestions \
+    romkatv/powerlevel10k
 
 ### End of Zinit's installer chunk
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
