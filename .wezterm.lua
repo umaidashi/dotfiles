@@ -1,16 +1,32 @@
+
 local wezterm = require 'wezterm'
 
 local config = {}
+
+-- help provide clearer error messages
+if wezterm.config_builder then
+	config = wezterm.config_builder()
+end
+
+-- This is where you actually apply your config choices
+
+-- For example, changing the color scheme:
+config.color_scheme = "node"
+config.window_decorations = "NONE"
+
+-- font
+config.font = wezterm.font("Roboto Mono for Powerline")
+
 
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
 -- カラースキームの設定(おすすめはMaterialDesignColors)
-config.color_scheme = 'MaterialDesignColors'
+-- config.color_scheme = 'MaterialDesignColors'
 
 -- 背景透過
-config.window_background_opacity = 0.80
+config.window_background_opacity = 0.90
 config.macos_window_background_blur = 15
 
 -- 最初からフルスクリーンで起動
@@ -29,23 +45,20 @@ config.font_size = 14
 -- ショートカットキー設定
 local act = wezterm.action
 config.keys = {
-  -- Alt(Opt)+Shift+Fでフルスクリーン切り替え
   {
     key = 'f',
     mods = 'SHIFT|CMD',
-    action = wezterm.action.ToggleFullScreen,
+    action = wezterm.action.ToggleFullScreen
   },
-  -- Ctrl+Shift+tで新しいタブを作成
   {
     key = 't',
     mods = 'SHIFT|CTRL',
-    action = act.SpawnTab 'CurrentPaneDomain',
+    action = act.SpawnTab 'CurrentPaneDomain'
   },
-  -- Ctrl+Shift+dで新しいペインを作成(画面を分割)
   {
     key = 'd',
     mods = 'CMD',
-    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
   },
   {
     key = 'd',

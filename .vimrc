@@ -5,7 +5,6 @@ set number
 set cursorline
 set virtualedit=onemore
 set smartindent
-set visualbell
 set showmatch
 set laststatus=2
 set wildmode=list:longest
@@ -15,6 +14,8 @@ set incsearch
 set wrapscan
 set hlsearch
 set rnu
+set tabstop=4
+set shiftwidth=4
 
 " <Leader>というプレフィックスキーにスペースを使用する
 let g:mapleader = "\<Space>"
