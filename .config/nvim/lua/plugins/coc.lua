@@ -11,6 +11,7 @@ return {
       "coc-sh",
       "coc-prettier",
       "coc-pyright",
+      "coc-go",
       "@yaegassy/coc-volar",
     }
   end,

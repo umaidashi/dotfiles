@@ -8,6 +8,7 @@
     "coc-prettier": ">=9.3.2",
     "coc-sh": ">=1.2.2",
     "coc-pyright": ">=1.1.351",
-    "@yaegassy/coc-volar": ">=0.35.2"
+    "@yaegassy/coc-volar": ">=0.35.2",
+    "coc-go": ">=1.3.33"
   }
 }

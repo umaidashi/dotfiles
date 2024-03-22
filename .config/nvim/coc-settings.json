@@ -1,0 +1,7 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "diagnostic.infoSign": "🤘",
+  "diagnostic.hintSign": "💡",
+  "diagnostic.warningSign": "⚠️",
+  "diagnostic.errorSign": "🚨"
+}
