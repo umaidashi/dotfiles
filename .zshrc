@@ -46,6 +46,7 @@ alias gsa='git status -uall'
 alias gl='git log'
 alias gig='git ls-files -o -i --exclude-standard'
 alias lg='lazygit'
+alias gini='gh repo create $(basename $(pwd)) --push -s .'
 
 alias vz='vi ~/.zshrc'
 alias sz='source ~/.zshrc'
