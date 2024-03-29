@@ -9,77 +9,77 @@
       "http://json.schemastore.org/prettierrc": {
         "etag": "\"079e10ba4ada1:0\"",
         "fileName": "b2ed7a7b6c79e58baf94e4ce160282de.schema.json",
-        "updateTime": 1711435070193
+        "updateTime": 1711642431613
       },
       "https://json.schemastore.org/package.json": {
         "etag": "\"0a624b1156da1:0\"",
         "fileName": "473f72b44c2905902dfbcc770aab7f7a.schema.json",
-        "updateTime": 1711435070581
+        "updateTime": 1711642432120
       },
       "https://json.schemastore.org/semantic-release.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "fbc95702ba6eddb3e2de4f52e31ca82a.schema.json",
-        "updateTime": 1711435071410
+        "updateTime": 1711642433179
       },
       "https://json.schemastore.org/ava.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "635f57185b22bce9d3a56c68f5da4ad7.schema.json",
-        "updateTime": 1711435071425
+        "updateTime": 1711642433182
       },
       "https://json.schemastore.org/stylelintrc.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "000bfbdd14d2fb8ec5b0d59bec32ef98.schema.json",
-        "updateTime": 1711435071465
+        "updateTime": 1711642433180
       },
       "https://json.schemastore.org/jscpd.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "22bfc1ab1ff56aae62322f6ce45dab5a.schema.json",
-        "updateTime": 1711435071419
+        "updateTime": 1711642433178
       },
       "https://json.schemastore.org/eslintrc.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "c5064f140d4cfdbf4d6fbe68f68abbb1.schema.json",
-        "updateTime": 1711435071477
+        "updateTime": 1711642433182
       },
       "https://json.schemastore.org/prettierrc.json": {
         "etag": "\"079e10ba4ada1:0\"",
         "fileName": "ea5ab10330a3ab77dfd6d00a735b0925.schema.json",
-        "updateTime": 1711435071477
+        "updateTime": 1711642433177
       },
       "https://json.schemastore.org/partial-eslint-plugins.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "fc7bb6e733b774ce47be6006f0b75b87.schema.json",
-        "updateTime": 1711435072294
+        "updateTime": 1711642434064
       },
       "https://json.schemastore.org/web-manifest-combined.json": {
         "etag": "\"9256526360d0d91:0\"",
         "fileName": "b06e2f702dd4972ea2bb3d76ff088406.schema.json",
-        "updateTime": 1711430575570
+        "updateTime": 1711641131201
       },
       "https://json.schemastore.org/foxx-manifest.json": {
         "etag": "\"0a624b1156da1:0\"",
         "fileName": "5e1deef4adbcb453011b95df734ed4a0.schema.json",
-        "updateTime": 1711430575567
+        "updateTime": 1711641131196
       },
       "https://json.schemastore.org/webextension.json": {
         "etag": "\"07f86260d0d91:0\"",
         "fileName": "b731fe11a3d127fd02a39912a2530816.schema.json",
-        "updateTime": 1711430575571
+        "updateTime": 1711641131200
       },
       "https://json.schemastore.org/web-manifest-app-info.json": {
         "etag": "\"b27da80326ad81:0\"",
         "fileName": "37e25b60beaa201ec2222b96a2ea00d6.schema.json",
-        "updateTime": 1711430578666
+        "updateTime": 1711641132065
       },
       "https://json.schemastore.org/web-manifest-share-target.json": {
         "etag": "\"8047ce18b33da1:0\"",
         "fileName": "cdeb8e92350ff78b8eec26631dae6f2d.schema.json",
-        "updateTime": 1711430578672
+        "updateTime": 1711641132062
       },
       "https://json.schemastore.org/web-manifest.json": {
         "etag": "\"8059190326ad81:0\"",
         "fileName": "6edb6ea4435d040104641056c40c6326.schema.json",
-        "updateTime": 1711430576530
+        "updateTime": 1711641132064
       },
       "https://raw.githubusercontent.com/SAP/ui5-manifest/master/schema.json": {
         "etag": "W/\"f73bc48731ff1f4f8865fdaa5c70196545dcd9a88d97288e33e9adbea6625441\"",
