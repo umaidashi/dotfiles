@@ -29,6 +29,9 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 # vim
+
+alias nvim='~/nvim-macos/bin/nvim'
+
 alias v='nvim'
 alias vi='v'
 alias v.='v .'
@@ -68,10 +71,13 @@ alias cn='norminette -R CheckForbiddenSourceHeader'
 export USER=yoishi
 export MAIL=yoishi@student.42tokyo.jp
 
+# brew
+export PATH="/Users/yoishi/.brew/bin:$PATH"
+
 # nvm
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completionxport NVM_DIR="$HOME/.nvm"
+# export NVM_DIR="$HOME/.nvm"
+#   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+#   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completionxport NVM_DIR="$HOME/.nvm"
 
 # bun completions
 [ -s "/Users/umaidashi/.bun/_bun" ] && source "/Users/umaidashi/.bun/_bun"
