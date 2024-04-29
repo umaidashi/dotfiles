@@ -17,7 +17,7 @@ alias t='touch'
 alias o='open'
 alias o.='open .'
 alias d='mkdir'
-alias cat='bat'
+# alias cat='bat'
 alias c='cat'
 alias cb='(){cat $1 | pbcopy}'
 alias l='less'
@@ -29,10 +29,9 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 # vim
+# alias nvim='~/nvim-macos/bin/nvim'
 
-alias nvim='~/nvim-macos/bin/nvim'
-
-alias v='nvim'
+# alias v='nvim'
 alias vi='v'
 alias v.='v .'
 
@@ -56,6 +55,8 @@ alias sz='source ~/.zshrc'
 alias vv='vi ~/.vimrc'
 alias vw='vi ~/.wezterm.lua'
 
+alias code='open -a "Visual Studio Code"'
+
 alias manja='(){open https://ja.manpages.org/$1}'
 
 function runc () {
@@ -63,7 +64,7 @@ function runc () {
 }
 alias -s c=runc
 
-alias cc='cc -Wall -Wextra -Werror'
+alias ccw='cc -Wall -Wextra -Werror'
 alias cf='python3 -m c_formatter_42'
 alias cn='norminette -R CheckForbiddenSourceHeader'
 
@@ -83,8 +84,8 @@ export PATH="/Users/yoishi/.brew/bin:$PATH"
 [ -s "/Users/umaidashi/.bun/_bun" ] && source "/Users/umaidashi/.bun/_bun"
 
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
