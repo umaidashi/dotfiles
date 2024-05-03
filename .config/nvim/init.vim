@@ -52,16 +52,30 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
+" tab switcher
+nnoremap H <Cmd>bp<CR>
+nnoremap L <Cmd>bn<CR>
+
 " plug:floaterm
-nnoremap <silent> <C-T> <Cmd>FloatermToggle<CR>
+nnoremap <silent> t <Cmd>FloatermToggle<CR>
 tnoremap <silent> <C-T> <Cmd>FloatermToggle<CR>
 hi FloatermBorder guibg=orange guifg=orange
 let g:floaterm_width = 0.98
 let g:floaterm_height = 0.7
 let g:floaterm_position = 'bottom'
 
+" plug:lazygit
+nnoremap <silent> <Leader>g <Cmd>LazyGit<CR>
+
 " plug:fzf
 nmap <C-p> :Files<CR>
+
+" plug:nerdtree
+nnoremap <leader>e :NERDTreeFocus<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+let g:NERDTreeShowHidden = 1
 
 " plugins
 call plug#begin()
@@ -73,16 +87,17 @@ Plug 'voldikss/vim-floaterm'
 Plug 'kdheepak/lazygit.nvim'
 
 " tabline
-Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
-Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'romgrk/barbar.nvim'
 
 " filer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Plug 'tamago324/lir.nvim'
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'kyazdani42/nvim-web-devicons'
+" nerdtree
+Plug 'preservim/nerdtree'
+
+" icon
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
