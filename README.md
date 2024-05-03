@@ -1,5 +1,7 @@
 # Dotfiles
 
+## Install
+
 ```
 cd ~
 
