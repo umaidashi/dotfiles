@@ -8,6 +8,7 @@ fi
 # PROMPT='%F{cyan}%h %~ %T
 # >%f '
 
+
 alias repo='(){cd ~/documents/github/$1}'
 alias desk='cd ~/Desktop'
 alias md='(){mkdir $1 ; cd $1}'
@@ -28,8 +29,8 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 # vim
-alias vi='nvim'
-alias v='vi'
+alias v='nvim'
+alias vi='v'
 alias v.='v .'
 
 alias tm='tmux new -s'
@@ -45,6 +46,7 @@ alias gsa='git status -uall'
 alias gl='git log'
 alias gig='git ls-files -o -i --exclude-standard'
 alias lg='lazygit'
+alias gini='gh repo create $(basename $(pwd)) --push -s .'
 
 alias vz='vi ~/.zshrc'
 alias sz='source ~/.zshrc'
@@ -106,3 +108,4 @@ zinit light-mode for \
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval $(/opt/homebrew/bin/brew shellenv)
