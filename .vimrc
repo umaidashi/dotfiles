@@ -29,10 +29,19 @@ syntax enable
 
 
 " インサートモードでカーソル移動
-imap <C-k> <Up>
-imap <C-j> <Down>
-imap <C-l> <Left>
-imap <C-h> <Right>
+imap <C-p> <Up>
+imap <C-n> <Down>
+imap <C-b> <Left>
+imap <C-f> <Right>
 
 nmap J 10j
 nmap H 10h
+
+nmap <C-h> <C-W>h
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-l> <C-W>l
+
+nnoremap L :bnext<CR>
+nnoremap H :bp<CR>
+
