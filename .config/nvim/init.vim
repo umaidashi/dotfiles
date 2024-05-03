@@ -67,6 +67,9 @@ let g:floaterm_position = 'bottom'
 " plug:lazygit
 nnoremap <silent> <Leader>g <Cmd>LazyGit<CR>
 
+"plug:barbar
+nnoremap <Leader>x <Cmd>BufferClose<CR>
+
 " plug:fzf
 nmap <C-p> :Files<CR>
 
