@@ -103,4 +103,6 @@ Plug 'preservim/nerdtree'
 " icon
 Plug 'nvim-tree/nvim-web-devicons'
 
+Plug '42Paris/42header'
+
 call plug#end()
