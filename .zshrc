@@ -8,7 +8,6 @@ fi
 # PROMPT='%F{cyan}%h %~ %T
 # >%f '
 
-
 alias repo='(){cd ~/documents/github/$1}'
 alias desk='cd ~/Desktop'
 alias md='(){mkdir $1 ; cd $1}'
@@ -17,9 +16,6 @@ alias t='touch'
 alias o='open'
 alias o.='open .'
 alias d='mkdir'
-alias v='lv'
-alias vi='lv'
-alias v.='v .'
 alias cat='bat'
 alias c='cat'
 alias cb='(){cat $1 | pbcopy}'
@@ -32,6 +28,9 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 # vim
+alias vi='nvim'
+alias v='vi'
+alias v.='v .'
 
 alias tm='tmux new -s'
 alias tma='tmux a -t'
@@ -51,7 +50,6 @@ alias vz='vi ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias vv='vi ~/.vimrc'
 alias vw='vi ~/.wezterm.lua'
-alias lv='/Users/umaidashi/.local/bin/lvim'
 
 alias manja='(){open https://ja.manpages.org/$1}'
 
