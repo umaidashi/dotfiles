@@ -19,9 +19,6 @@ alias t='touch'
 alias o='open'
 alias o.='open .'
 alias d='mkdir'
-alias v='lv'
-alias vi='lv'
-alias v.='v .'
 alias cat='bat'
 alias c='cat'
 alias cb='(){cat $1 | pbcopy}'
@@ -34,9 +31,7 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 # vim
-# alias nvim='~/nvim-macos/bin/nvim'
-# alias v='nvim'
-alias v='vim'
+alias v='nvim'
 alias vi='v'
 alias v.='v .'
 
@@ -53,12 +48,12 @@ alias gsa='git status -uall'
 alias gl='git log'
 alias gig='git ls-files -o -i --exclude-standard'
 alias lg='lazygit'
+alias gini='gh repo create $(basename $(pwd)) --push -s .'
 
 alias vz='vi ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias vv='vi ~/.vimrc'
 alias vw='vi ~/.wezterm.lua'
-alias lv='/Users/umaidashi/.local/bin/lvim'
 
 alias manja='(){open https://ja.manpages.org/$1}'
 
@@ -115,3 +110,4 @@ zinit light-mode for \
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval $(/opt/homebrew/bin/brew shellenv)
