@@ -9,7 +9,9 @@ fi
 # >%f '
 
 
-alias repo='(){cd ~/documents/github/$1}'
+alias rmcache='rm -Rfv /Library/Caches/* ~/Library/Caches/* 2> /dev/null'
+
+alias repo='(){cd ~/documents/git/$1}'
 alias desk='cd ~/Desktop'
 alias md='(){mkdir $1 ; cd $1}'
 alias mdn='(){mkdir ex{01..0\$1}'
@@ -32,6 +34,11 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 # vim
+# alias nvim='~/nvim-macos/bin/nvim'
+# alias v='nvim'
+alias v='vim'
+alias vi='v'
+alias v.='v .'
 
 alias tm='tmux new -s'
 alias tma='tmux a -t'
