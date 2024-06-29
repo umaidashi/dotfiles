@@ -8,6 +8,7 @@ fi
 # PROMPT='%F{cyan}%h %~ %T
 # >%f '
 
+alias gorun='go mod init a; go run .'
 
 alias repo='(){cd ~/documents/git/$1}'
 alias desk='cd ~/Desktop'
@@ -29,9 +30,8 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 # vim
-# alias nvim='~/nvim-macos/bin/nvim'
-
-# alias v='nvim'
+alias nvim='~/nvim-macos/bin/nvim'
+alias v='nvim'
 alias vi='v'
 alias v.='v .'
 
@@ -116,3 +116,7 @@ zinit light-mode for \
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval $(/opt/homebrew/bin/brew shellenv)
+
+alias francinette=/Users/yoishi/francinette/tester.sh
+
+alias paco=/Users/yoishi/francinette/tester.sh
