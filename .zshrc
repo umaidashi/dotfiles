@@ -9,7 +9,9 @@ fi
 # >%f '
 
 
-alias repo='(){cd ~/documents/github/$1}'
+alias rmcache='rm -Rfv /Library/Caches/* ~/Library/Caches/* 2> /dev/null'
+
+alias repo='(){cd ~/documents/git/$1}'
 alias desk='cd ~/Desktop'
 alias md='(){mkdir $1 ; cd $1}'
 alias mdn='(){mkdir ex{01..0\$1}'
