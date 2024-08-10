@@ -57,8 +57,10 @@ nnoremap H <Cmd>bp<CR>
 nnoremap L <Cmd>bn<CR>
 
 " plug:floaterm
-nnoremap <silent> t <Cmd>FloatermToggle<CR>
-tnoremap <silent> <C-T> <Cmd>FloatermToggle<CR>
+" nnoremap <silent> t <Cmd>FloatermToggle<CR>
+" tnoremap <silent> <C-T> <Cmd>FloatermToggle<CR>
+nnoremap <C-/> <Cmd>FloatermToggle<CR>
+tnoremap <C-/> <Cmd>FloatermToggle<CR>
 hi FloatermBorder guibg=orange guifg=orange
 let g:floaterm_width = 0.98
 let g:floaterm_height = 0.7
