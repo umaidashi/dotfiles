@@ -67,8 +67,8 @@ alias cf='python3 -m c_formatter_42'
 alias cn='norminette -R CheckForbiddenSourceHeader'
 
 
-export USER=yoishi
-export MAIL=yoishi@student.42tokyo.jp
+export USER=yu.oishi
+# export MAIL=yoishi@student.42tokyo.jp
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -113,4 +113,7 @@ zinit light-mode for \
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval $(/opt/homebrew/bin/brew shellenv)
+# eval $(/opt/homebrew/bin/brew shellenv)
+
+# Created by `pipx` on 2024-08-14 05:36:04
+export PATH="$PATH:/Users/yu.oishi/.local/bin"
