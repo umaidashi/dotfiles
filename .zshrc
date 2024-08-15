@@ -66,6 +66,7 @@ alias cc='cc -Wall -Wextra -Werror'
 alias cf='python3 -m c_formatter_42'
 alias cn='norminette -R CheckForbiddenSourceHeader'
 
+alias gb='gobang'
 
 export USER=yu.oishi
 # export MAIL=yoishi@student.42tokyo.jp
