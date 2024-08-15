@@ -1,8 +1,5 @@
-[pager]
-	diff = delta
-	log = delta
-	reflog = delta
-	show = delta
+[core]
+    pager = delta
 
 [delta]
 	plus-style = "syntax #012800"
@@ -10,6 +7,23 @@
 	syntax-theme = Monokai Extended
 	navigate = true
 	line-numbers = true
+    features = decorations
+	side-by-side = true
+    line-numbers-left-format = ""
+    line-numbers-right-format = "│ "
+
 
 [interactive]
-	diffFilter = delta --color-only
+    diffFilter = delta --color-only --features=interactive
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
