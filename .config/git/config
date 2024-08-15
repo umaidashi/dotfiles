@@ -8,9 +8,9 @@
 	navigate = true
 	line-numbers = true
     features = decorations
-	side-by-side = true
-    line-numbers-left-format = ""
-    line-numbers-right-format = "│ "
+	# side-by-side = true
+    # line-numbers-left-format = ""
+    # line-numbers-right-format = "│ "
 
 
 [interactive]
