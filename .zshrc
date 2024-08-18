@@ -71,6 +71,9 @@ alias gb='gobang'
 export USER=yu.oishi
 # export MAIL=yoishi@student.42tokyo.jp
 
+# go
+export PATH="$HOME/go/bin:$PATH"
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
