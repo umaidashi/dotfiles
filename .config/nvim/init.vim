@@ -73,14 +73,25 @@ nnoremap <silent> <Leader>g <Cmd>LazyGit<CR>
 nnoremap <Leader>x <Cmd>BufferClose<CR>
 
 " plug:fzf
-nmap <C-p> :Files<CR>
+nmap <C-p> <Cmd>Files<CR>
 
 " plug:nerdtree
-nnoremap <leader>e :NERDTreeFocus<CR>
+nnoremap <Leader>e <Cmd>NERDTreeFocus<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 let g:NERDTreeShowHidden = 1
+
+" plug:coc
+nnoremap [coc] <Nop>
+nmap ,c [coc]
+nmap <silent>[coc]d <Plug>(coc-definition)zz
+
+" plug:telescope
+nnoremap <Leader>ff <Cmd>Telescope find_files find_command=rg,--files,--hidden,--glob,!*.git<CR>
+nnoremap <Leader>fg <Cmd>Telescope live_grep vimgrep_arguments=rg,--line-number,--column,--smart-case,--hidden,--no-ignore,--glob,!*.git<CR>
+nnoremap <Leader>fb <Cmd>Telescope buffers --hidden,--glob,!*.git<CR>
+nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
 
 " plugins
 call plug#begin()
@@ -106,5 +117,18 @@ Plug 'preservim/nerdtree'
 Plug 'nvim-tree/nvim-web-devicons'
 
 Plug '42Paris/42header'
+
+" coc.nvim
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+" vim-go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+
+" treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
