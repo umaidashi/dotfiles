@@ -1,3 +1,48 @@
+" plugins
+call plug#begin()
+
+" floaterm
+Plug 'voldikss/vim-floaterm'
+
+" lazygit
+Plug 'kdheepak/lazygit.nvim'
+
+" tabline
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'romgrk/barbar.nvim'
+
+" filer
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" nerdtree
+Plug 'preservim/nerdtree'
+
+" icon
+Plug 'nvim-tree/nvim-web-devicons'
+
+Plug '42Paris/42header'
+
+" coc.nvim
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+" vim-go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+
+" treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" colorscheme
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
+call plug#end()
+
+
+
 let g:user42 = 'yoishi'
 let g:mail42 = 'yoishi@student.42tokyo.jp'
 
@@ -93,42 +138,25 @@ nnoremap <Leader>fg <Cmd>Telescope live_grep vimgrep_arguments=rg,--line-number,
 nnoremap <Leader>fb <Cmd>Telescope buffers --hidden,--glob,!*.git<CR>
 nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
 
-" plugins
-call plug#begin()
 
-" floaterm
-Plug 'voldikss/vim-floaterm'
+" plug:treesitter
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+  },
+}
+EOF
 
-" lazygit
-Plug 'kdheepak/lazygit.nvim'
+let g:nvcode_termcolors=256
+syntax on
+" colorscheme catppuccin
 
-" tabline
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'romgrk/barbar.nvim'
+" plug:vim-go
+let g:go_def_mapping_enabled = 0
+let g:go_doc_keywordprg_enabled = 0
+nnoremap <Leader>dc <Cmd>GoDoc<CR>
+nnoremap <Leader>dw <Cmd>GoDocBrowser<CR>
 
-" filer
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" nerdtree
-Plug 'preservim/nerdtree'
-
-" icon
-Plug 'nvim-tree/nvim-web-devicons'
-
-Plug '42Paris/42header'
-
-" coc.nvim
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-
-" vim-go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-" telescope
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
-
-" treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-call plug#end()
