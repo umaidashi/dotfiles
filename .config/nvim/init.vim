@@ -19,7 +19,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 
 " icon
-Plug 'nvim-tree/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 Plug '42Paris/42header'
 
@@ -37,7 +37,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " colorscheme
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'sainnhe/gruvbox-material'
 
 call plug#end()
 
@@ -58,7 +58,7 @@ set smartcase
 set incsearch
 set wrapscan
 set hlsearch
-set rnu
+" set rnu
 set tabstop=4
 set shiftwidth=4
 syntax enable
@@ -68,8 +68,9 @@ let g:mapleader = "\<Space>"
 
 " commands
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>ww :wq<CR>
+nnoremap <Leader>ww :wqa<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>qq :qa<CR>
 
 " cursor moving insert mode
 imap <C-p> <Up>
@@ -126,6 +127,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 let g:NERDTreeShowHidden = 1
+let g:webdevicons_enable_nerdtree = 1
 
 " plug:coc
 nnoremap [coc] <Nop>
@@ -142,17 +144,15 @@ nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
 " plug:treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = "all",
   highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
+    enable = true,
   },
 }
 EOF
-
 let g:nvcode_termcolors=256
 syntax on
-" colorscheme catppuccin
+colorscheme gruvbox-material
 
 " plug:vim-go
 let g:go_def_mapping_enabled = 0
