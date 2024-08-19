@@ -10,6 +10,7 @@ Plug 'kdheepak/lazygit.nvim'
 " tabline
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'romgrk/barbar.nvim'
+Plug 'kazhala/close-buffers.nvim'
 
 " filer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -39,6 +40,15 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " colorscheme
 Plug 'sainnhe/gruvbox-material'
 
+" commentout
+Plug 'numToStr/Comment.nvim'
+
+" lspconfig
+Plug 'neovim/nvim-lspconfig'
+
+" error message
+Plug 'nvim-lua/completion-nvim'
+
 call plug#end()
 
 
@@ -67,10 +77,10 @@ syntax enable
 let g:mapleader = "\<Space>"
 
 " commands
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :w<CR>
 nnoremap <Leader>ww :wqa<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>qq :qa<CR>
+nnoremap <Leader>qq :q!<CR>
 
 " cursor moving insert mode
 imap <C-p> <Up>
@@ -160,3 +170,23 @@ let g:go_doc_keywordprg_enabled = 0
 nnoremap <Leader>dc <Cmd>GoDoc<CR>
 nnoremap <Leader>dw <Cmd>GoDocBrowser<CR>
 
+" plug:Comment
+lua << EOF
+require('Comment').setup()
+EOF
+
+" plug:completion-nvim
+set completeopt=menuone,noinsert,noselect
+set shortmess+=c
+let g:vimsyn_embed='lPr'
+lua << EOF
+    local on_attach = function (client, bufnr)
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
+        require('completion').on_attach(client)
+    end
+    require('lspconfig').vimls.setup({on_attach = on_attach})
+    require('lspconfig').tsserver.setup({on_attach = on_attach})
+    require('lspconfig').intelephense.setup({on_attach = on_attach})
+EOF
