@@ -50,6 +50,9 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 
+" bracket auto pair
+Plug 'windwp/nvim-autopairs'
+
 call plug#end()
 
 
@@ -185,4 +188,9 @@ END
 lua <<END
 require('gitsigns').setup()
 END
+
+" plug:autopairs
+lua << EOF
+require("nvim-autopairs").setup {}
+EOF
 
