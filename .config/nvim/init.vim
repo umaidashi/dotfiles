@@ -183,6 +183,7 @@ let g:go_def_mapping_enabled = 0
 let g:go_doc_keywordprg_enabled = 0
 nnoremap <Leader>dc <Cmd>GoDoc<CR>
 nnoremap <Leader>dw <Cmd>GoDocBrowser<CR>
+nnoremap gd <Cmd>GoDef<CR>
 
 " plug:go-lsp
 lua <<EOF
