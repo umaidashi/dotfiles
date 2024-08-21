@@ -94,7 +94,7 @@ let g:mapleader = "\<Space>"
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>ww :wqa<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>qq :q!<CR>
+nnoremap <Leader>qq :qa!<CR>
 
 " cursor moving insert mode
 imap <C-p> <Up>
