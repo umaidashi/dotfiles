@@ -35,9 +35,11 @@ alias v='nvim'
 alias vi='v'
 alias v.='v .'
 
+# tmux
 alias tm='tmux new -s'
 alias tma='tmux a -t'
 
+# git
 alias g='git'
 alias gc='(){git commit -m "$1 $2"}'
 alias gp='git push'
@@ -50,10 +52,12 @@ alias gig='git ls-files -o -i --exclude-standard'
 alias lg='lazygit'
 alias gini='gh repo create $(basename $(pwd)) --push -s .'
 
+# shotcut
 alias vz='vi ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias vv='vi ~/.vimrc'
 alias vw='vi ~/.wezterm.lua'
+alias vn='v ~/dotfiles'
 
 alias manja='(){open https://ja.manpages.org/$1}'
 
