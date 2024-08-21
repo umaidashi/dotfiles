@@ -7,10 +7,10 @@ if wezterm.config_builder then
 end
 
 -- Theme
-config.color_scheme = "node"
+config.color_scheme = "Gruvbox Dark (Gogh)"
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.80
-config.macos_window_background_blur = 15
+-- config.window_background_opacity = 0.80
+-- config.macos_window_background_blur = 15
 
 -- Font
 config.font = wezterm.font("Roboto Mono for Powerline")
