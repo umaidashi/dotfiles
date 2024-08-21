@@ -139,8 +139,9 @@ let g:floaterm_position = 'bottom'
 " plug:lazygit
 nnoremap <silent> <Leader>g <Cmd>LazyGit<CR>
 
-"plug:barbar
-nnoremap <Leader>x <Cmd>BufferClose<CR>
+" plug:barbar
+nnoremap <Leader>xb <Cmd>BufferClose<CR>
+nnoremap <Leader>xw <Cmd>close<CR>
 
 " plug:fzf
 nmap <C-p> <Cmd>Files<CR>
@@ -164,7 +165,6 @@ nnoremap <Leader>fg <Cmd>Telescope live_grep vimgrep_arguments=rg,--line-number,
 nnoremap <Leader>fb <Cmd>Telescope buffers --hidden,--glob,!*.git<CR>
 nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
 
-
 " plug:treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
@@ -183,7 +183,7 @@ let g:go_def_mapping_enabled = 0
 let g:go_doc_keywordprg_enabled = 0
 nnoremap <Leader>dc <Cmd>GoDoc<CR>
 nnoremap <Leader>dw <Cmd>GoDocBrowser<CR>
-nnoremap gd <Cmd>GoDef<CR>
+nnoremap <silent>gd <Cmd>GoDef<CR>
 
 " plug:go-lsp
 lua <<EOF
