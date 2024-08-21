@@ -9,6 +9,7 @@ fi
 # >%f '
 
 
+# remove Caches in 42Tokyo
 alias rmcache='rm -Rfv /Library/Caches/* ~/Library/Caches/* 2> /dev/null'
 
 alias repo='(){cd ~/documents/git/$1}'
