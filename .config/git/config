@@ -2,7 +2,7 @@
     pager = delta
 
 [delta]
-	plus-style = "syntax #012800"
+	plus-style = "syntax #007000"
 	minus-style = "syntax #340001"
 	syntax-theme = Monokai Extended
 	navigate = true
