@@ -64,8 +64,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 " copilot
-Plug 'zbirenbaum/copilot.lua'
-Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -266,10 +265,4 @@ lua <<EOF
   }
 EOF
 
-" plug:copilot
-lua << EOF
-require("CopilotChat").setup {
-  debug = true, -- Enable debugging
-  -- See Configuration section for rest
-}
-EOF
+
