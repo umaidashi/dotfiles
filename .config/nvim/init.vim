@@ -130,8 +130,6 @@ nnoremap H <Cmd>bp<CR>
 nnoremap L <Cmd>bn<CR>
 
 " plug:floaterm
-" nnoremap <silent> t <Cmd>FloatermToggle<CR>
-" tnoremap <silent> <C-T> <Cmd>FloatermToggle<CR>
 nnoremap <C-/> <Cmd>FloatermToggle<CR>
 tnoremap <C-/> <Cmd>FloatermToggle<CR>
 hi FloatermBorder guibg=orange guifg=orange
@@ -151,9 +149,9 @@ nmap <C-p> <Cmd>Files<CR>
 
 " plug:nerdtree
 nnoremap <Leader>e <Cmd>NERDTreeFocus<CR>
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 let g:NERDTreeShowHidden = 1
 let g:webdevicons_enable_nerdtree = 1
 
