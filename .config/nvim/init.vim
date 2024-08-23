@@ -26,9 +26,6 @@ Plug 'preservim/nerdtree' |
 
 Plug '42Paris/42header'
 
-" coc.nvim
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-
 " vim-go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -71,9 +68,10 @@ Plug 'github/copilot.vim'
 " markdown
 Plug 'ixru/nvim-markdown'
 
-" noice
+" notice
 Plug 'folke/noice.nvim'
 Plug 'MunifTanjim/nui.nvim'
+Plug 'rcarriga/nvim-notify'
 
 call plug#end()
 
@@ -103,10 +101,9 @@ syntax enable
 let g:mapleader = "\<Space>"
 
 " commands
-nnoremap <Leader>s :w<CR>
-nnoremap <Leader>ww :wqa<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>qq :qa!<CR>
+nnoremap <silent>s :w<CR>
+nnoremap <silent>qw :wqa!<CR>
+nnoremap <silent>qq :qa!<CR>
 
 " cursor moving insert mode
 imap <C-p> <Up>
@@ -121,7 +118,6 @@ nnoremap <silent> <Esc><Esc> :<C-u>nohlsearch<CR>
 
 " not yank
 nnoremap x "_x
-nnoremap s "_s
 nnoremap c "_c
 
 " jump
@@ -164,16 +160,11 @@ nnoremap <Leader>e <Cmd>NERDTreeToggle<CR>
 let g:NERDTreeShowHidden = 1
 let g:webdevicons_enable_nerdtree = 1
 
-" plug:coc
-nnoremap [coc] <Nop>
-nmap ,c [coc]
-nmap <silent>[coc]d <Plug>(coc-definition)zz
-
 " plug:telescope
-nnoremap <Leader>ff <Cmd>Telescope find_files find_command=rg,--files,--hidden,--glob,!*.git<CR>
-nnoremap <Leader>fg <Cmd>Telescope live_grep vimgrep_arguments=rg,--line-number,--column,--smart-case,--hidden,--no-ignore,--glob,!*.git<CR>
-nnoremap <Leader>fb <Cmd>Telescope buffers --hidden,--glob,!*.git<CR>
-nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
+nnoremap <silent>ff <Cmd>Telescope find_files find_command=rg,--files,--hidden,--glob,!*.git<CR>
+nnoremap <silent>fg <Cmd>Telescope live_grep vimgrep_arguments=rg,--line-number,--column,--smart-case,--hidden,--no-ignore,--glob,!*.git<CR>
+nnoremap <silent>fb <Cmd>Telescope buffers --hidden,--glob,!*.git<CR>
+nnoremap <silent>fh <Cmd>Telescope help_tags<CR>
 
 " plug:treesitter
 lua << EOF
