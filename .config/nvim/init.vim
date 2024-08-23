@@ -7,6 +7,10 @@ Plug 'voldikss/vim-floaterm'
 " lazygit
 Plug 'kdheepak/lazygit.nvim'
 
+" icon
+Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
+
 " tabline
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'romgrk/barbar.nvim'
@@ -17,10 +21,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " nerdtree
-Plug 'preservim/nerdtree'
-
-" icon
-Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug '42Paris/42header'
 
@@ -148,7 +150,7 @@ nnoremap <Leader>xw <Cmd>close<CR>
 nmap <C-p> <Cmd>Files<CR>
 
 " plug:nerdtree
-nnoremap <Leader>e <Cmd>NERDTreeFocus<CR>
+nnoremap <Leader>e <Cmd>NERDTreeToggle<CR>
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
