@@ -7,7 +7,7 @@ if wezterm.config_builder then
 end
 
 -- Theme
-config.color_scheme = "Gruvbox Dark (Gogh)"
+config.color_scheme = "Kanagawa (Gogh)"
 config.window_decorations = "RESIZE"
 -- config.window_background_opacity = 0.80
 -- config.macos_window_background_blur = 15

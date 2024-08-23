@@ -35,9 +35,6 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" colorscheme
-Plug 'sainnhe/gruvbox-material'
-
 " commentout
 Plug 'numToStr/Comment.nvim'
 
@@ -81,6 +78,9 @@ Plug 'linrongbin16/gitlinker.nvim'
 " hlchunk
 Plug 'yaocccc/nvim-hlchunk'
 
+" colorscheme
+Plug 'rebelot/kanagawa.nvim'
+Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
 
@@ -142,6 +142,18 @@ nmap <C-l> <C-W>l
 nnoremap H <Cmd>bp<CR>
 nnoremap L <Cmd>bn<CR>
 
+" plug:treesitter
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all",
+  highlight = {
+    enable = true,
+  },
+}
+EOF
+let g:nvcode_termcolors=256
+colorscheme kanagawa
+
 " plug:floaterm
 nnoremap <C-/> <Cmd>FloatermToggle<CR>
 tnoremap <C-/> <Cmd>FloatermToggle<CR>
@@ -175,19 +187,6 @@ nnoremap <silent>ff <Cmd>Telescope find_files find_command=rg,--files,--hidden,-
 nnoremap <silent>fg <Cmd>Telescope live_grep vimgrep_arguments=rg,--line-number,--column,--smart-case,--hidden,--no-ignore,--glob,!*.git<CR>
 nnoremap <silent>fb <Cmd>Telescope buffers --hidden,--glob,!*.git<CR>
 nnoremap <silent>fh <Cmd>Telescope help_tags<CR>
-
-" plug:treesitter
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all",
-  highlight = {
-    enable = true,
-  },
-}
-EOF
-let g:nvcode_termcolors=256
-syntax on
-colorscheme gruvbox-material
 
 " plug:vim-go
 let g:go_def_mapping_enabled = 0
