@@ -68,6 +68,13 @@ Plug 'hrsh7th/vim-vsnip'
 " copilot
 Plug 'github/copilot.vim'
 
+" markdown
+Plug 'ixru/nvim-markdown'
+
+" noice
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
+
 call plug#end()
 
 
@@ -265,4 +272,8 @@ lua <<EOF
   }
 EOF
 
+" plug:noice
+lua << EOF
+require('noice').setup()
+EOF
 
