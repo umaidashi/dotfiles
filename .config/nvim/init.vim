@@ -84,6 +84,9 @@ Plug 'kevinhwang91/nvim-bqf'
 " sandwitch
 Plug 'machakann/vim-sandwich'
 
+" tree
+Plug 'Wansmer/treesj'
+
 " colorscheme
 Plug 'rebelot/kanagawa.nvim'
 Plug 'sainnhe/gruvbox-material'
@@ -152,10 +155,8 @@ nnoremap L <Cmd>bn<CR>
 " plug:treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all",
-  highlight = {
-    enable = true,
-  },
+	ensure_installed = "all",
+	highlight = { enable = true },
 }
 EOF
 let g:nvcode_termcolors=256
@@ -303,4 +304,9 @@ EOF
 " plug:bpf
 lua << EOF
 require("bqf").setup()
+EOF
+
+" plug:treesj
+lua << EOF
+require("treesj").setup()
 EOF
