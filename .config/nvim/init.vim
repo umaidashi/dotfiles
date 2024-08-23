@@ -78,9 +78,16 @@ Plug 'linrongbin16/gitlinker.nvim'
 " hlchunk
 Plug 'yaocccc/nvim-hlchunk'
 
+" bqf
+Plug 'kevinhwang91/nvim-bqf'
+
+" sandwitch
+Plug 'machakann/vim-sandwich'
+
 " colorscheme
 Plug 'rebelot/kanagawa.nvim'
 Plug 'sainnhe/gruvbox-material'
+
 call plug#end()
 
 
@@ -291,4 +298,9 @@ EOF
 " plug:gitlinker
 lua << EOF
 require("gitlinker").setup()
+EOF
+
+" plug:bpf
+lua << EOF
+require("bqf").setup()
 EOF
