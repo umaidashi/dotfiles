@@ -118,11 +118,10 @@ zinit light-mode for \
     zsh-users/zsh-autosuggestions \
     romkatv/powerlevel10k
 
-### End of Zinit's installer chunk
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # Created by `pipx` on 2024-08-14 05:36:04
 export PATH="$PATH:/Users/yu.oishi/.local/bin"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
