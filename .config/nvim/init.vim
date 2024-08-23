@@ -72,6 +72,12 @@ Plug 'folke/noice.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'rcarriga/nvim-notify'
 
+" open project root of git
+Plug 'ahmedkhalf/project.nvim'
+
+" git linker
+Plug 'linrongbin16/gitlinker.nvim'
+
 call plug#end()
 
 
@@ -274,3 +280,14 @@ EOF
 lua << EOF
 require("bufferline").setup{}
 EOF
+
+" plug:project_nvim
+lua << EOF
+require("project_nvim").setup {}
+EOF
+
+" plug:gitlinker
+lua << EOF
+require("gitlinker").setup()
+EOF
+
