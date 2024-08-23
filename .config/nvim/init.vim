@@ -165,7 +165,6 @@ colorscheme kanagawa
 " plug:floaterm
 nnoremap <C-/> <Cmd>FloatermToggle<CR>
 tnoremap <C-/> <Cmd>FloatermToggle<CR>
-hi FloatermBorder guibg=orange guifg=orange
 let g:floaterm_width = 0.98
 let g:floaterm_height = 0.7
 let g:floaterm_position = 'bottom'
