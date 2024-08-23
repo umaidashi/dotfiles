@@ -310,3 +310,4 @@ EOF
 lua << EOF
 require("treesj").setup()
 EOF
+nnoremap <Leader>f <Cmd>TSJToggle<CR>
