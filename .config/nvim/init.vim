@@ -12,8 +12,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
 
 " tabline
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'romgrk/barbar.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'kazhala/close-buffers.nvim'
 
 " filer
@@ -146,8 +145,10 @@ let g:floaterm_position = 'bottom'
 nnoremap <silent> <Leader>g <Cmd>LazyGit<CR>
 
 " plug:barbar
-nnoremap <Leader>xb <Cmd>BufferClose<CR>
+nnoremap <Leader>xb <Cmd>BDelete! this<CR>
 nnoremap <Leader>xw <Cmd>close<CR>
+nnoremap <Leader>xo <Cmd>BDelete! other<CR>
+nnoremap <Leader>xa <Cmd>BDelete! all<CR>
 
 " plug:fzf
 nmap <C-p> <Cmd>Files<CR>
@@ -268,3 +269,8 @@ lua << EOF
 require('noice').setup()
 EOF
 
+
+" plug:bufferline
+lua << EOF
+require("bufferline").setup{}
+EOF
