@@ -78,6 +78,9 @@ Plug 'ahmedkhalf/project.nvim'
 " git linker
 Plug 'linrongbin16/gitlinker.nvim'
 
+" hlchunk
+Plug 'yaocccc/nvim-hlchunk'
+
 call plug#end()
 
 
@@ -290,4 +293,3 @@ EOF
 lua << EOF
 require("gitlinker").setup()
 EOF
-
