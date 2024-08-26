@@ -359,7 +359,8 @@ require('lspsaga').setup({
 })
 EOF
 nnoremap <silent>cc <Cmd>Lspsaga code_action<CR>
-nnoremap <Leader>dc <Cmd>Lspsaga hover_doc<CR>
+nnoremap <Leader>k <Cmd>Lspsaga hover_doc<CR>
+nnoremap <Leader>dc <Cmd>Lspsaga peek_definition<CR>
 nnoremap <Leader>df <Cmd>Lspsaga finder<CR>
 nnoremap <Leader>o <Cmd>Lspsaga outline<CR>
 nnoremap <Leader>rn <Cmd>Lspsaga rename<CR>
