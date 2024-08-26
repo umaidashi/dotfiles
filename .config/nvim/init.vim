@@ -87,6 +87,12 @@ Plug 'machakann/vim-sandwich'
 " tree
 Plug 'Wansmer/treesj'
 
+" blamer
+Plug 'APZelos/blamer.nvim'
+
+" context
+Plug 'nvim-treesitter/nvim-treesitter-context'
+
 " colorscheme
 Plug 'rebelot/kanagawa.nvim'
 Plug 'sainnhe/gruvbox-material'
@@ -165,9 +171,9 @@ colorscheme kanagawa
 " plug:floaterm
 nnoremap <C-/> <Cmd>FloatermToggle<CR>
 tnoremap <C-/> <Cmd>FloatermToggle<CR>
-let g:floaterm_width = 0.98
-let g:floaterm_height = 0.7
-let g:floaterm_position = 'bottom'
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
+let g:floaterm_position = 'center'
 
 " plug:lazygit
 nnoremap <silent> <Leader>g <Cmd>LazyGit<CR>
@@ -310,3 +316,9 @@ lua << EOF
 require("treesj").setup()
 EOF
 nnoremap <Leader>f <Cmd>TSJToggle<CR>
+
+" plug:blamer
+let g:blamer_date_format = '%y/%m/%d %H:%M'
+let g:blamer_delay = 0
+let g:blamer_enabled = 1
+let g:blamer_prefix = ' > '
