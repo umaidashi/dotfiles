@@ -99,6 +99,9 @@ Plug 'folke/trouble.nvim'
 " lspsaga
 Plug 'nvimdev/lspsaga.nvim'
 
+" csv
+Plug 'mechatroner/rainbow_csv'
+
 " colorscheme
 Plug 'rebelot/kanagawa.nvim'
 Plug 'sainnhe/gruvbox-material'
