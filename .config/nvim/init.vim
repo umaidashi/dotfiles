@@ -61,8 +61,8 @@ Plug 'hrsh7th/vim-vsnip'
 " copilot
 Plug 'github/copilot.vim'
 
-" markdown
-Plug 'ixru/nvim-markdown'
+" " markdown
+" Plug 'ixru/nvim-markdown'
 
 " notice
 Plug 'folke/noice.nvim'
@@ -90,6 +90,7 @@ Plug 'Wansmer/treesj'
 " colorscheme
 Plug 'rebelot/kanagawa.nvim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'EdenEast/nightfox.nvim'
 
 call plug#end()
 
@@ -111,8 +112,8 @@ set incsearch
 set wrapscan
 set hlsearch
 " set rnu
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 syntax enable
 
 " leader
@@ -160,7 +161,7 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 let g:nvcode_termcolors=256
-colorscheme kanagawa
+colorscheme nightfox
 
 " plug:floaterm
 nnoremap <C-/> <Cmd>FloatermToggle<CR>
