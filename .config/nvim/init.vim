@@ -87,10 +87,28 @@ Plug 'machakann/vim-sandwich'
 " tree
 Plug 'Wansmer/treesj'
 
+" blamer
+Plug 'APZelos/blamer.nvim'
+
+" context
+Plug 'nvim-treesitter/nvim-treesitter-context'
+
+" trouble
+Plug 'folke/trouble.nvim'
+
+" lspsaga
+Plug 'nvimdev/lspsaga.nvim'
+
+" csv
+Plug 'mechatroner/rainbow_csv'
+
 " colorscheme
 Plug 'rebelot/kanagawa.nvim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'EdenEast/nightfox.nvim'
+
+" startify
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -166,9 +184,9 @@ colorscheme nightfox
 " plug:floaterm
 nnoremap <C-/> <Cmd>FloatermToggle<CR>
 tnoremap <C-/> <Cmd>FloatermToggle<CR>
-let g:floaterm_width = 0.98
-let g:floaterm_height = 0.7
-let g:floaterm_position = 'bottom'
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
+let g:floaterm_position = 'center'
 
 " plug:lazygit
 nnoremap <silent> <Leader>g <Cmd>LazyGit<CR>
@@ -199,8 +217,8 @@ nnoremap <silent>fh <Cmd>Telescope help_tags<CR>
 " plug:vim-go
 let g:go_def_mapping_enabled = 0
 let g:go_doc_keywordprg_enabled = 0
-nnoremap <Leader>dc <Cmd>GoDoc<CR>
-nnoremap <Leader>dw <Cmd>GoDocBrowser<CR>
+" nnoremap <Leader>dc <Cmd>GoDoc<CR>
+" nnoremap <Leader>dw <Cmd>GoDocBrowser<CR>
 nnoremap <silent>gd <Cmd>GoDef<CR>
 
 " plug:go-lsp
@@ -311,3 +329,70 @@ lua << EOF
 require("treesj").setup()
 EOF
 nnoremap <Leader>f <Cmd>TSJToggle<CR>
+
+" plug:blamer
+let g:blamer_date_format = '%y/%m/%d %H:%M'
+let g:blamer_delay = 0
+let g:blamer_enabled = 1
+let g:blamer_prefix = ' > '
+
+" plug:trouble
+lua << EOF
+require("trouble").setup{}
+EOF
+nnoremap <Leader>xx <Cmd>Trouble diagnostics toggle<CR>
+
+" plug:lspsaga
+lua << EOF
+require('lspsaga').setup({
+	code_action = {
+		extend_gitsigns = true,
+	},
+	ui = {
+        border = 'rounded',
+    },
+    symbol_in_winbar = {
+        enable = false,
+    },
+    lightbulb = {
+        sign = false,
+    },
+    outline = {
+        win_width = 50,
+        keys = {
+            toggle_or_jump = '<cr>',
+        },
+    },
+})
+EOF
+nnoremap <silent>cc <Cmd>Lspsaga code_action<CR>
+nnoremap <Leader>k <Cmd>Lspsaga hover_doc<CR>
+nnoremap <Leader>dc <Cmd>Lspsaga peek_definition<CR>
+nnoremap <Leader>df <Cmd>Lspsaga finder<CR>
+nnoremap <Leader>o <Cmd>Lspsaga outline<CR>
+nnoremap <Leader>rn <Cmd>Lspsaga rename<CR>
+
+
+" plug:startify
+let g:startify_custom_header = [
+\ '      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀      ',
+\ '      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠏⠸⡕⣄⠀⠀      ',
+\ '      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡌⠀⠀⣱⡌⢆⠀      ',
+\ '      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜⠀⣠⡾⣫⢰⠈⠆      ',
+\ '      ⢀⣤⡤⡶⠖⠚⠛⠛⠋⠉⠛⠛⠛⠛⠛⠛⠛⢀⣾⣟⠓⠃⠫⢽⢦⡃⢰      ',
+\ '      ⣿⢥⣄⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣴⣹⣞⣯⣔⣒⣴⣯⣴⡷⣿      ',
+\ '      ⢸⡁⠀⠀⢀⣀⣈⣉⣉⣉⣉⡉⠉⣍⣩⢛⣹⠉⢹⡍⣉⡁⠀⠀⢠⠃⣿      ',
+\ '      ⠸⣷⡾⠋⠉⠉⠁⠀⠀⠀⠀⢀⣴⣿⣿⣷⡿⠀⠀⠈⠻⢿⣇⣠⠃⠀⡇      ',
+\ '      ⠀⢿⡟⠲⠂⠀⠀⠀⠀⣤⣾⠿⠿⠿⠿⠿⠵⠾⠆⠚⠒⠒⠒⠓⠒⣲⡇      ',
+\ '      ⠀⠸⠇⠀⠀⠀⠀⠀⠀⠀⠸⠂⠀⠀⠀⠂⠀⠘⠊⠀⠀⠀⢀⡰⠂⣿⡇      ',
+\ '      ⠀⠀⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⣼⠀      ',
+\ '      ⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣽⠀      ',
+\ '      ⠀⠀⠘⣷⠀⠀⠀⠀⢀⣤⣤⣤⣀⠀⠀⢀⣤⠴⠦⣤⡀⠀⠀⠀⢀⡿⠀      ',
+\ '      ⠀⠀⠀⢻⡇⠀⠀⢰⣫⣄⠀⠀⠉⣷⠀⣿⣧⣄⠀⠀⢹⡆⠀⠀⢸⡇⠀      ',
+\ '      ⠀⠀⠀⢸⣷⠀⠀⠸⣿⠟⠀⠀⢀⣿⣀⣿⡛⠋⠀⢀⣼⠃⠀⠀⢸⡇⠀      ',
+\ '      ⠀⠀⠀⠀⣿⡇⠀⠀⠉⠓⠲⠶⣿⡿⠿⢿⢿⠿⠞⠋⠁⠀⠀⠀⢸⡇⠀      ',
+\ '      ⠀⠀⠀⠀⢸⣿⡄⠀⠀⠀⠀⠀⠙⡿⣿⢳⠟⠀⠀⠀⠀⠀⠀⠀⣾⠃⠀      ',
+\ '      ⠀⠀⠀⠀⠘⣿⣿⠠⢤⣄⣀⣀⠀⠛⠛⠛⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀      ',
+\ '      ⠀⠀⠀⠀⠀⢹⢿⡄⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡏⠀⠀      ',
+\ '      ⠀⠀⠀⠀⠀⠈⠻⠿⣦⣤⣤⣀⣀⣀⣀⣀⣀⣀⣀⣠⣤⣤⠶⠟⠁⠀⠀      ',
+\ '      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀      ',]
