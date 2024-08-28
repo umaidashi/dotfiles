@@ -35,6 +35,7 @@ alias lla='ls -la'
 alias v='nvim'
 alias vi='v'
 alias v.='v .'
+alias vl='NVIM_APPNAME=nvim-lua nvim'
 
 # tmux
 alias tm='tmux new -s'
@@ -73,7 +74,8 @@ alias cn='norminette -R CheckForbiddenSourceHeader'
 
 alias gb='gobang'
 
-export USER=yu.oishi
+# export USER=yu.oishi
+export USER=umaidashi
 # export MAIL=yoishi@student.42tokyo.jp
 
 # go
