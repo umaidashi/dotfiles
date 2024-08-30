@@ -134,6 +134,8 @@ set tabstop=2
 set shiftwidth=2
 syntax enable
 
+set clipboard+=unnamed
+
 " leader
 let g:mapleader = "\<Space>"
 
