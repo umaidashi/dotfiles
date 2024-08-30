@@ -1,6 +1,9 @@
 " plugins
 call plug#begin()
 
+"test
+Plug '~/Documents/git/weather-lualine'
+
 " floaterm
 Plug 'voldikss/vim-floaterm'
 
@@ -233,7 +236,11 @@ EOF
 
 " plug:lualine
 lua << END
-require('lualine').setup()
+require('lualine').setup({
+	sections = {
+		lualine_z = {'weather','location'}
+	}
+})
 END
 
 " plug:gitsighns
