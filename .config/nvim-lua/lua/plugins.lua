@@ -1,52 +1,85 @@
-vim.cmd.packadd "packer.nvim"
+local use = require("packer").use
+local fn = vim.fn
+local execute = vim.api.nvim_command
+
+local install_path = fn.stdpath("data") .. "~/.local/share/nvim/site/pack/packer/start/packer.nvim"
+
+if fn.empty(fn.glob(install_path)) > 0 then
+	fn.system({
+		"git",
+		"clone",
+		"https://github.com/wbthomason/packer.nvim",
+		install_path,
+	})
+	execute("packadd packer.nvim")
+end
 
 require("packer").startup(function()
-  -- colorscheme
-  use "EdenEast/nightfox.nvim"
+	-- colorscheme
+	use("EdenEast/nightfox.nvim")
 
-  -- icon
-  use "kyazdani42/nvim-web-devicons"
-  use "nvim-tree/nvim-web-devicons"
+	-- icon
+	use("kyazdani42/nvim-web-devicons")
+	use("nvim-tree/nvim-web-devicons")
 
-  -- nerdtree
-  use "preservim/nerdtree"
-  use "Xuyuanp/nerdtree-git-plugin"
+	-- common
+	use("nvim-lua/plenary.nvim")
 
-  -- floaterm
-  use "voldikss/vim-floaterm"
+	-- nerdtree
+	use("preservim/nerdtree")
+	use("Xuyuanp/nerdtree-git-plugin")
 
-  -- treesitter
-  use "nvim-treesitter/nvim-treesitter"
+	-- statusline
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
 
-  -- fzf
-  use "junegunn/fzf.vim"
+	-- floaterm
+	use("voldikss/vim-floaterm")
 
-  -- telescope
-  use "nvim-lua/popup.nvim"
-  use "nvim-lua/plenary.nvim"
-  use "nvim-telescope/telescope.nvim"
+	-- treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
 
-  -- git
-  use "kdheepak/lazygit.nvim"
-  use "nvim-lua/plenary.nvim"
-  use "lewis6991/gitsigns.nvim"
-  
-  -- lsp
-  use "neovim/nvim-lspconfig"
+	-- ui
+	use("folke/noice.nvim")
+	use("MunifTanjim/nui.nvim")
+	use("rcarriga/nvim-notify")
 
-  -- completion
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-cmdline"
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-vsnip"
-  use "hrsh7th/vim-vsnip"
+	-- fzf
+	-- use("junegunn/fzf.vim")
 
-  -- copilot
-  use "github/copilot.vim"
+	-- telescope
+	-- use("nvim-lua/popup.nvim")
+	-- use("nvim-telescope/telescope.nvim")
+
+	-- git
+	use("kdheepak/lazygit.nvim")
+	use("lewis6991/gitsigns.nvim")
+	use("ahmedkhalf/project.nvim")
+	use("linrongbin16/gitlinker.nvim")
+
+	-- lsp
+	use("neovim/nvim-lspconfig")
+
+	-- completion
+	-- use("hrsh7th/cmp-nvim-lsp")
+	-- use("hrsh7th/cmp-buffer")
+	-- use("hrsh7th/cmp-path")
+	-- use("hrsh7th/cmp-cmdline")
+	-- use("hrsh7th/nvim-cmp")
+	-- use("hrsh7th/cmp-vsnip")
+	-- use("hrsh7th/vim-vsnip")
+
+	-- copilot
+	-- use("github/copilot.vim")
+
+	-- commentout
+	-- use("numToStr/Comment.nvim")
 end)
 
-
-require('gitsigns').setup()
-
+require("gitsigns").setup()
+require("plugins/lualine-config")
