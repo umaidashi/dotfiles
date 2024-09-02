@@ -53,8 +53,12 @@ require("packer").startup(function()
 	-- use("junegunn/fzf.vim")
 
 	-- telescope
-	-- use("nvim-lua/popup.nvim")
-	-- use("nvim-telescope/telescope.nvim")
+	use("nvim-lua/popup.nvim")
+	use({
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 
 	-- git
 	use("kdheepak/lazygit.nvim")
@@ -83,3 +87,4 @@ end)
 
 require("gitsigns").setup()
 require("plugins/lualine-config")
+require("plugins/telescope-config")

@@ -1,6 +1,6 @@
 require("base")
-require("plugins")
 require("keymaps")
+require("plugins")
 require("colorscheme")
 
 print("init.lua")
