@@ -240,7 +240,7 @@ EOF
 lua << END
 require('lualine').setup({
 	sections = {
-		lualine_z = {'weather','location'}
+		lualine_x = {'encoding', 'fileformat', 'filetype','weather'}
 	}
 })
 END
