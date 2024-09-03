@@ -44,7 +44,22 @@ keymap("n", "<leader>g", "<cmd>LazyGit<CR>", opts)
 
 -- Telescope
 keymap("n", "ff", "<cmd>Telescope find_files find_command=rg,--files,--hidden,--glob,!*.git<CR>", opts)
-keymap("n", "fg", "<cmd>Telescope live_grep vimgrep_arguments=rg,--line-number,--column,--smart-case,--hidden,--no-ignore,--glob,!*.git<CR>", opts)
+keymap(
+	"n",
+	"fg",
+	"<cmd>Telescope live_grep vimgrep_arguments=rg,--line-number,--column,--smart-case,--hidden,--no-ignore,--glob,!*.git<CR>",
+	opts
+)
 keymap("n", "fb", "<cmd>Telescope buffers --hidden,--glob,!*.git<CR>", opts)
 keymap("n", "fh", "<cmd>Telescope help_tags<CR>", opts)
 
+-- nvim-tree
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
+
+-- lspsaga
+keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
+keymap("n", "<leader>k", "<cmd>Lspsaga hover_doc<CR>", opts)
+keymap("n", "<leader>dc", "<cmd>Lspsaga peek_definition<CR>", opts)
+keymap("n", "<leader>df", "<cmd>Lspsaga finder<CR>", opts)
+keymap("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts)
+keymap("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)

@@ -1,11 +1,10 @@
-require('telescope').setup{
-  defaults = {
+require("telescope").setup({
+	defaults = {
 		prompt_prefix = "🔍 ",
-    mappings = {
-      i = {
-        ["<C-h>"] = "which_key"
-      }
-    }
-  },
-}
-
+		mappings = {
+			i = {
+				["<C-h>"] = "which_key",
+			},
+		},
+	},
+})
