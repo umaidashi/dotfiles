@@ -35,12 +35,11 @@ require("packer").startup(function()
 
 	-- bufferline
 	use({
-		'akinsho/bufferline.nvim',
+		"akinsho/bufferline.nvim",
 		tag = "*",
-		requires = 'nvim-tree/nvim-web-devicons',
+		requires = "nvim-tree/nvim-web-devicons",
 	})
-	use('kazhala/close-buffers.nvim')
-
+	use("kazhala/close-buffers.nvim")
 
 	-- statusline
 	use({
