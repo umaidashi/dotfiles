@@ -6,8 +6,8 @@ vim.g.lazyvim_picker = "auto"
 vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 vim.g.lazygit_config = true
 vim.g.lazyvim_statuscolumn = {
-  folds_open = false, -- show fold sign when fold is open
-  folds_githl = false, -- highlight fold sign with git sign color
+	folds_open = false, -- show fold sign when fold is open
+	folds_githl = false, -- highlight fold sign with git sign color
 }
 vim.g.deprecation_warnings = false
 vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
