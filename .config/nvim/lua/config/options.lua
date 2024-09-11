@@ -1,0 +1,9 @@
+local opt = vim.opt
+opt.number = true
+opt.relativenumber = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.smartcase = true -- Don't ignore case with capitals
+opt.smartindent = true -- Insert indents automatically
+opt.spelllang = { "en" }
+opt.autoread = true
