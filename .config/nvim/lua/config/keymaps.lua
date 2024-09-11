@@ -28,3 +28,8 @@ map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 map("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
+map("i", "<C-p>", "<Up>", { desc = "Up"})
+map("i", "<C-n>", "<Down>", { desc = "Down"})
+map("i", "<C-f>", "<Right>", { desc = "Right"})
+map("i", "<C-b>", "<Left>", { desc = "Left"})
