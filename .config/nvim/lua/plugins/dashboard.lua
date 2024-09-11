@@ -1,7 +1,7 @@
 return {
-	"nvimdev/dashboard-nvim",
-	opts = function()
-		local logo = [[
+  "nvimdev/dashboard-nvim",
+  opts = function()
+    local logo = [[
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,
 | ~ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | [ | ] | <-    |
 |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
@@ -15,14 +15,14 @@ return {
 '------'  '-----'--------------------------'------'  '------'
 		]]
 
-		logo = string.rep("\n", 8) .. logo .. "\n\n"
-		local opts = {
-			theme = "doom",
-			hide = {
-				statusline = false,
-			},
-			config = {
-				header = vim.split(logo, "\n"),
+    logo = string.rep("\n", 8) .. logo .. "\n\n"
+    local opts = {
+      theme = "doom",
+      hide = {
+        statusline = false,
+      },
+      config = {
+        header = vim.split(logo, "\n"),
 				-- stylua: ignore
 				center = {
 					{ action = 'lua LazyVim.pick()()',                           desc = " Find File",       icon = " ", key = "f" },
@@ -35,13 +35,13 @@ return {
 					{ action = "Lazy",                                           desc = " Lazy",            icon = "󰒲 ", key = "l" },
 					{ action = function() vim.api.nvim_input("<cmd>qa<cr>") end, desc = " Quit",            icon = " ", key = "q" },
 				},
-				footer = function()
-					local stats = require("lazy").stats()
-					local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-					return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
-				end,
-			},
-		}
-		return opts
-	end,
+        footer = function()
+          local stats = require("lazy").stats()
+          local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+          return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
+        end,
+      },
+    }
+    return opts
+  end,
 }
