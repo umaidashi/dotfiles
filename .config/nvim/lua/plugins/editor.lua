@@ -1,3 +1,3 @@
 return {
-  {'yaocccc/nvim-hlchunk'}
+  { "yaocccc/nvim-hlchunk" },
 }
