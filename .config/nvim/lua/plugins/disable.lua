@@ -1,10 +1,4 @@
 return {
-  { "hrsh7th/nvim-cmp", enabled = false },
-  { "hrsh7th/cmp-nvim-lsp", enabled = false },
-  { "hrsh7th/cmp-buffer", enabled = false },
-  { "hrsh7th/cmp-path", enabled = false },
-  { "hrsh7th/cmp-path", enabled = false },
-  { "nvim-cmp", enabled = false },
   { "garymjr/nvim-snippets", enabled = false },
   { "rafamadriz/friendly-snippets", enabled = false },
   { "echasnovski/mini.pairs", enabled = false },
