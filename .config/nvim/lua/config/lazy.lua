@@ -20,7 +20,6 @@ require("lazy").setup({
     { import = "plugins" },
     -- extras
     { import = "lazyvim.plugins.extras.lang.go" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.lang.clangd" },
   },
   defaults = {
