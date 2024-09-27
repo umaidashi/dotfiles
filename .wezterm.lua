@@ -6,15 +6,23 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- Theme
+-- editor
 config.color_scheme = "nightfox"
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
--- config.window_background_opacity = 0.80
--- config.macos_window_background_blur = 15
+config.hide_tab_bar_if_only_one_tab = true
+config.show_new_tab_button_in_tab_bar = false
+config.colors = {
+  tab_bar = {
+    inactive_tab_edge = "none",
+  },
+}
 
 -- Font
 config.font = wezterm.font("Roboto Mono for Powerline")
 config.font_size = 16
+config.use_ime = true
 
 -- Keymapping
 local act = wezterm.action

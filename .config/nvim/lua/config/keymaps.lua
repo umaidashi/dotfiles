@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+local Util = require("lazyvim.util")
 
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
@@ -33,3 +34,10 @@ map("i", "<C-p>", "<Up>", { desc = "Up" })
 map("i", "<C-n>", "<Down>", { desc = "Down" })
 map("i", "<C-f>", "<Right>", { desc = "Right" })
 map("i", "<C-b>", "<Left>", { desc = "Left" })
+
+-- ターミナルにボーダーを追加する。
+local lazyterm = function()
+  Util.terminal(nil, { cwd = Util.root(), border = "rounded" })
+end
+map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
+map("n", "<C-/>", lazyterm, { desc = "Terminal (root dir)" })
