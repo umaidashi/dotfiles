@@ -8,3 +8,4 @@ opt.smartindent = true
 opt.spelllang = { "en" }
 opt.autoread = true
 opt.cursorline = true
+opt.wrap = true
