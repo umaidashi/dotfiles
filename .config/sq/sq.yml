@@ -1,0 +1,13 @@
+config.version: v0.48.3
+options: {}
+collection:
+  active.source: "@stock"
+  active.group: ""
+  scratch: ""
+  sources:
+  - handle: "@sakila_pg"
+    driver: postgres
+    location: postgres://sakila:p_ssW0rd@localhost/sakila
+  - handle: "@stock"
+    driver: postgres
+    location: postgres://stock:stock@localhost:5432/stock?sslmode=disable

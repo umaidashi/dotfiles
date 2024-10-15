@@ -8,6 +8,10 @@ fi
 # PROMPT='%F{cyan}%h %~ %T
 # >%f '
 
+if [[ -r "$HOME/.zshrc-bst" ]]; then
+  source "$HOME/.zshrc-bst"
+fi
+
 
 # remove Caches in 42Tokyo
 alias rmcache='rm -Rfv /Library/Caches/* ~/Library/Caches/* 2> /dev/null'
@@ -76,7 +80,7 @@ alias cn='norminette -R CheckForbiddenSourceHeader'
 alias gb='gobang'
 
 # export USER=yu.oishi
-export USER=umaidashi
+# export USER=umaidashi
 # export MAIL=yoishi@student.42tokyo.jp
 
 # go
