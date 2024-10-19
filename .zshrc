@@ -66,6 +66,9 @@ alias vv='vi ~/.vimrc'
 alias vw='vi ~/.wezterm.lua'
 alias vn='v ~/dotfiles'
 
+# npm
+alias p='pnpm'
+
 alias manja='(){open https://ja.manpages.org/$1}'
 
 function runc () {
