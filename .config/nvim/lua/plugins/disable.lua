@@ -7,6 +7,4 @@ return {
   { "folke/lazydev.nvim", enabled = false },
   { "Bilal2453/luvit-meta", enabled = false },
   { "folke/flash.nvim", enabled = false },
-  { "williamboman/mason.nvim", enabled = false },
-  { "williamboman/mason-lspconfig.nvim", enabled = false },
 }
