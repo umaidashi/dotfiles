@@ -86,7 +86,6 @@ alias gb='gobang'
 # go
 export PATH="$HOME/go/bin:$PATH"
 
-
 # bun completions
 [ -s "/Users/umaidashi/.bun/_bun" ] && source "/Users/umaidashi/.bun/_bun"
 
@@ -129,3 +128,7 @@ export PATH="$PATH:/Users/yu.oishi/.local/bin"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(atuin init zsh)"
+
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
