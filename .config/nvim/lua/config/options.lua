@@ -1,7 +1,6 @@
 local opt = vim.opt
 opt.number = true
-opt.relativenumber = true
-opt.tabstop = 2
+opt.tabstop = 3
 opt.shiftwidth = 2
 opt.smartcase = true
 opt.smartindent = true
@@ -9,3 +8,11 @@ opt.spelllang = { "en" }
 opt.autoread = true
 opt.cursorline = true
 opt.wrap = true
+opt.listchars:append({
+  eol = "↲",
+  tab = ">>",
+  trail = "-",
+  extends = ">",
+  precedes = "<",
+  nbsp = "@",
+})
