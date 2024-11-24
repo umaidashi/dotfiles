@@ -1,0 +1,5 @@
+[[database]]
+Name = 'stock-local'
+Provider = 'postgres'
+DBName = 'stock'
+URL = 'postgres://stock:stock@localhost:5432/stock?sslmode=disable'
