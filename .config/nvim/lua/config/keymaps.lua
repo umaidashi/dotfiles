@@ -37,8 +37,8 @@ set("i", "<C-f>", "<Right>", { desc = "Right" })
 set("i", "<C-b>", "<Left>", { desc = "Left" })
 
 -- ターミナルにボーダーを追加する。
-local lazyterm = function()
-  Util.terminal(nil, { cwd = Util.root(), border = "rounded" })
-end
-set("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
-set("n", "<C-/>", lazyterm, { desc = "Terminal (root dir)" })
+-- local lazyterm = function()
+--   Util.terminal(nil, { cwd = Util.root(), border = "rounded" })
+-- end
+-- set("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
+-- set("n", "<C-/>", lazyterm, { desc = "Terminal (root dir)" })
