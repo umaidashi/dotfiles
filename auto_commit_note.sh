@@ -1,19 +1,19 @@
 #!/bin/bash
 
 cd ~/documents/git/note
-git pull
+git pull >/dev/null 2>&1
 
-status=$(git status -s)
+result=$(git status -s)
 if [ ! -n "$result" ]; then
-  return
+  exit 0
 fi
 
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 hostname=$(hostname)
 
-git add .
-git commit -m "🤖[$hostname] < commit at $DATE"
-git push
+git add . >/dev/null 2>&1
+git commit -m "🤖[$hostname] < commit at $DATE" >/dev/null 2>&1
+git push >/dev/null 2>&1
 
 if [ $? -eq 0 ]; then
   osascript -e 'display notification "commit succeed!!" with title "Note Auto Commiter"'
