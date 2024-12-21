@@ -1,6 +1,6 @@
 #!/bin/bash
-dotfiles=(.zshrc .tmux.conf .vimrc .wezterm.lua .p10k.zsh .config)
+dotfiles=(.zshrc .tmux.conf .vimrc .wezterm.lua .p10k.zsh .config auto_commit_note.sh)
 
 for file in "${dotfiles[@]}"; do
-	ln -svf ~/dotfiles/$file ~/
+  ln -svf ~/dotfiles/$file ~/
 done
