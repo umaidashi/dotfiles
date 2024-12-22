@@ -136,3 +136,5 @@ eval "$(atuin init zsh)"
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
+
+. "$HOME/.limbo/env"
