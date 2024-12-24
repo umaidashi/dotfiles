@@ -16,3 +16,4 @@ opt.listchars:append({
   precedes = "<",
   nbsp = "@",
 })
+vim.g.lazyvim_eslint_auto_format = true
