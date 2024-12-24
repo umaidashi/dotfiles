@@ -3,3 +3,9 @@ Name = 'stock-local'
 Provider = 'postgres'
 DBName = 'stock'
 URL = 'postgres://stock:stock@localhost:5432/stock?sslmode=disable'
+
+[[database]]
+Name = 'todo'
+Provider = 'postgres'
+DBName = 'app_db'
+URL = 'postgres://postgres:password@localhost:15432/app_db?sslmode=disable'

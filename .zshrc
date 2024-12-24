@@ -12,9 +12,10 @@ if [[ -r "$HOME/.zshrc-bst" ]]; then
   source "$HOME/.zshrc-bst"
 fi
 
-
 # remove Caches in 42Tokyo
 alias rmcache='rm -Rfv /Library/Caches/* ~/Library/Caches/* 2> /dev/null'
+
+alias nc='~/auto_commit_note.sh &'
 
 alias repo='(){cd ~/documents/git/$1}'
 alias desk='cd ~/Desktop'
@@ -135,3 +136,5 @@ eval "$(atuin init zsh)"
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
+
+. "$HOME/.limbo/env"
