@@ -137,4 +137,6 @@ eval "$(atuin init zsh)"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 
-. "$HOME/.limbo/env"
+if [[ -r "$HOME/.limbo/env" ]]; then
+  . "$HOME/.limbo/env"
+fi
