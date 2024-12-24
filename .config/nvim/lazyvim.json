@@ -1,6 +1,7 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.coding.blink",
+    "lazyvim.plugins.extras.ai.copilot",
+    "lazyvim.plugins.extras.coding.nvim-cmp",
     "lazyvim.plugins.extras.editor.overseer",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.docker",
@@ -10,6 +11,7 @@
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.prisma",
     "lazyvim.plugins.extras.lang.rust",
+    "lazyvim.plugins.extras.lang.svelte",
     "lazyvim.plugins.extras.lang.terraform",
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.lang.typescript",
