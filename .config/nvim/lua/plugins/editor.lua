@@ -2,6 +2,21 @@ return {
   { "yaocccc/nvim-hlchunk" },
   { "windwp/nvim-autopairs" },
   {
+    "stevearc/overseer.nvim",
+    keys = {
+      { "m", "<cmd>OverseerToggle<CR>", mode = "n", desc = "Overseer Toggle" },
+      { "M", "<cmd>OverseerRun<CR>", mode = "n", desc = "Stop Overseer" },
+    },
+  },
+  {
+    "folke/trouble.nvim",
+    -- opts will be merged with the parent spec
+    opts = { use_diagnostic_signs = true },
+    keys = {
+      {"t", "<cmd>Trouble diagnostics<CR>", mode = "n", desc = "Trouble Diagnostics"},
+    },
+  },
+  {
     "voldikss/vim-translator",
     cmd = { "TranslateW", "TranslateW --target_lang=en" },
     keys = {
