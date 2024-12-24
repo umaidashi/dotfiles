@@ -1,8 +1,0 @@
-[[conn]]
-type = "postgres"
-user = "stock"
-host = "localhost"
-port = 5432
-database = "stock"
-password = "stock"
-name = "stock-local"
