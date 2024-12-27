@@ -12,6 +12,15 @@ if [[ -r "$HOME/.zshrc-bst" ]]; then
   source "$HOME/.zshrc-bst"
 fi
 
+function j() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 export EDITOR=nvim
 # remove Caches in 42Tokyo
 alias rmcache='rm -Rfv /Library/Caches/* ~/Library/Caches/* 2> /dev/null'
@@ -31,7 +40,6 @@ alias c='cat'
 alias cb='(){cat $1 | pbcopy}'
 alias l='less'
 alias y='yazi'
-alias j='yazi'
 
 # ls
 alias ls='ls -aGF'
