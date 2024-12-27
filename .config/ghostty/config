@@ -1,7 +1,11 @@
-title = "Ghostty"
-
 background-opacity = 0.8
 background-blur-radius = 20
 font-size = 14
 
 auto-update = check
+macos-titlebar-style = tabs
+
+
+# keybind config
+keybind = ctrl+super+l=next_tab
+keybind = ctrl+super+h=previous_tab
