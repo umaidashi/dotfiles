@@ -31,6 +31,7 @@ alias c='cat'
 alias cb='(){cat $1 | pbcopy}'
 alias l='less'
 alias y='yazi'
+alias j='yazi'
 
 # ls
 alias ls='ls -aGF'
