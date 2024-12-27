@@ -12,6 +12,7 @@ if [[ -r "$HOME/.zshrc-bst" ]]; then
   source "$HOME/.zshrc-bst"
 fi
 
+export EDITOR=nvim
 # remove Caches in 42Tokyo
 alias rmcache='rm -Rfv /Library/Caches/* ~/Library/Caches/* 2> /dev/null'
 
@@ -29,6 +30,7 @@ alias cat='bat'
 alias c='cat'
 alias cb='(){cat $1 | pbcopy}'
 alias l='less'
+alias y='yazi'
 
 # ls
 alias ls='ls -aGF'
