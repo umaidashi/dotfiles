@@ -59,4 +59,5 @@ return {
     "sindrets/diffview.nvim",
   },
   { "rhysd/git-messenger.vim" },
+  { "lambdalisue/vim-gin", dependencies = { "vim-denops/denops.vim" } },
 }
