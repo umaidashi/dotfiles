@@ -20,7 +20,7 @@ customCommands:
       - type: "menuFromCommand"
         title: "ai Commits"
         key: "Msg"
-        command: "bunx @umaidashi/ghcommit@0.0.5"
+        command: "bunx @umaidashi/ghcommit@1.0.0"
         # command: "bun run start"
         filter: "(?P<message>.+)$"
         valueFormat: "{{ .message }}"
