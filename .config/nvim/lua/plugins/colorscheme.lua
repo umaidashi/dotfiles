@@ -1,23 +1,14 @@
 return {
-  -- { "EdenEast/nightfox.nvim",
-  --   opts = {
-  --     transparent = true,
-  --   }
-  -- },
   {
-    "tokyonight.nvim",
+    "ayu-theme/ayu-vim",
     opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+      transparent_mode = true,
     },
   },
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     colorscheme = "nightfox",
-  --   },
-  -- },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "ayu",
+    },
+  },
 }
