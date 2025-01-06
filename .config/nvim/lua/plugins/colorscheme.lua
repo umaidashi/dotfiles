@@ -1,14 +1,24 @@
 return {
+  -- {
+  --   "ayu-theme/ayu-vim",
+  --   opts = {
+  --     transparent_mode = true,
+  --   },
+  -- },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     -- colorscheme = "ayu",
+  --   },
+  -- },
   {
-    "ayu-theme/ayu-vim",
+    "tokyonight.nvim",
     opts = {
-      transparent_mode = true,
-    },
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "ayu",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
   },
 }
