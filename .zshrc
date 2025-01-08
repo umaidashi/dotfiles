@@ -21,6 +21,16 @@ function j() {
 	rm -f -- "$tmp"
 }
 
+cd_git_repo() {
+  local selected="$(ghq list | fzf)"
+
+  if [[ -n "$selected" ]]; then
+    cd "$(ghq root)/$selected"
+  fi
+}
+
+bindkey -s '^g' 'cd_git_repo\n'
+
 export EDITOR=nvim
 # remove Caches in 42Tokyo
 alias rmcache='rm -Rfv /Library/Caches/* ~/Library/Caches/* 2> /dev/null'
