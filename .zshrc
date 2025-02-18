@@ -45,8 +45,7 @@ alias t='touch'
 alias o='open'
 alias o.='open .'
 alias d='mkdir'
-alias cat='bat'
-alias c='cat'
+alias c='bat'
 alias cb='(){cat $1 | pbcopy}'
 alias l='less'
 alias y='yazi'
@@ -56,6 +55,9 @@ alias ls='ls -aGF'
 export LSCOLORS=cxfxcxdxbxegedabagacad
 alias ll='ls -l'
 alias lla='ls -la'
+
+# grep
+alias -g g='| grep --color'
 
 # vim
 alias v='nvim'
