@@ -29,6 +29,10 @@ cd_git_repo() {
   fi
 }
 
+gre () {
+	grep -E $1 -rl $2
+}
+
 bindkey -s '^g' 'cd_git_repo\n'
 
 export EDITOR=nvim
@@ -82,6 +86,7 @@ alias gl='git log'
 alias gig='git ls-files -o -i --exclude-standard'
 alias lg='lazygit'
 alias gini='gh repo create $(basename $(pwd)) --push -s .'
+alias rmlock='rm -f .git/index.lock'
 
 # shotcut
 alias vz='vi ~/.zshrc'
