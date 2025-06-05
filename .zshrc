@@ -12,6 +12,11 @@ if [[ -r "$HOME/.zshrc-bst" ]]; then
   source "$HOME/.zshrc-bst"
 fi
 
+function wt() {
+  git worktree add ./worktrees/$1 main
+  cd ./worktrees/$1 && git checkout -b $1
+}
+
 function j() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
