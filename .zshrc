@@ -61,7 +61,7 @@ alias ll='ls -l'
 alias lla='ls -la'
 
 # grep
-alias -g g='| grep --color'
+alias -g G='| grep --color'
 
 # vim
 alias v='nvim'
@@ -87,6 +87,7 @@ alias gig='git ls-files -o -i --exclude-standard'
 alias lg='lazygit'
 alias gini='gh repo create $(basename $(pwd)) --push -s .'
 alias rmlock='rm -f .git/index.lock'
+alias gw='git worktree'
 
 # shotcut
 alias vz='vi ~/.zshrc'
@@ -168,3 +169,7 @@ eval "$(atuin init zsh)"
 if [[ -r "$HOME/.limbo/env" ]]; then
   . "$HOME/.limbo/env"
 fi
+
+# Added by Windsurf
+export PATH="/Users/yu.oishi/.codeium/windsurf/bin:$PATH"
+alias claude="/Users/yu.oishi/.claude/local/claude"

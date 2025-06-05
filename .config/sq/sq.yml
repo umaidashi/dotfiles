@@ -11,3 +11,6 @@ collection:
   - handle: "@stock"
     driver: postgres
     location: postgres://stock:stock@localhost:5432/stock?sslmode=disable
+  - handle: "@gyro_teritory"
+    driver: csv
+    location: /Users/yu.oishi/Documents/gyro_teritory.csv
