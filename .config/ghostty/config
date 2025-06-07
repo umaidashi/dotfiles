@@ -43,3 +43,4 @@ palette = 15=#ffffff
 font-size = 14
 font-thicken = true
 macos-titlebar-style = tabs
+keybind = shift+enter=text:\n
