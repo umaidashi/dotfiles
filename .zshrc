@@ -76,8 +76,17 @@ alias vl='NVIM_APPNAME=nvim-lua nvim'
 alias vs='NVIM_APPNAME=nvim.vs nvim'
 
 # tmux
-alias tm='tmux new -s'
-alias tma='tmux a -t'
+alias tm='tmux'
+alias tms='tmux ls'
+
+# tmux session selector
+function ts() {
+  local session
+  session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --query="$1" --select-1 --exit-0)
+  if [[ -n "$session" ]]; then
+    tmux attach-session -t "$session" || tmux switch-client -t "$session"
+  fi
+}
 
 # git
 alias g='git'
