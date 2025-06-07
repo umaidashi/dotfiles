@@ -8,3 +8,5 @@
 	email = umaidashi18@gmail.com
 [ghq]
 	root = ~/Documents/git
+[init]
+	defaultBranch = main
