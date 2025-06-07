@@ -134,14 +134,14 @@ alias gb='gobang'
 export PATH="$HOME/go/bin:$PATH"
 
 # bun completions
-[ -s "/Users/umaidashi/.bun/_bun" ] && source "/Users/umaidashi/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # flutter
-export PATH="$PATH:/Users/umaidashi/flutter/bin"
+export PATH="$PATH:$HOME/flutter/bin"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -170,7 +170,7 @@ zinit light-mode for \
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # Created by `pipx` on 2024-08-14 05:36:04
-export PATH="$PATH:/Users/yu.oishi/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -185,5 +185,5 @@ if [[ -r "$HOME/.limbo/env" ]]; then
 fi
 
 # Added by Windsurf
-export PATH="/Users/yu.oishi/.codeium/windsurf/bin:$PATH"
-alias claude="/Users/yu.oishi/.claude/local/claude"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
+alias claude="$HOME/.claude/local/claude"
