@@ -186,4 +186,3 @@ fi
 
 # Added by Windsurf
 export PATH="$HOME/.codeium/windsurf/bin:$PATH"
-alias claude="$HOME/.claude/local/claude"
