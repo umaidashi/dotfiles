@@ -59,6 +59,12 @@ alias cb='(){cat $1 | pbcopy}'
 alias l='less'
 alias y='yazi'
 
+alias ab='agent-browser'
+alias abo='agent-browser open'
+alias abc='agent-browser click'
+alias abs='agent-browser snapshot'
+alias abcl='agent-browser close'
+
 # ls
 alias ls='ls -aGF'
 export LSCOLORS=cxfxcxdxbxegedabagacad
@@ -78,6 +84,8 @@ alias vs='NVIM_APPNAME=nvim.vs nvim'
 # tmux
 alias tm='tmux'
 alias tms='tmux ls'
+
+alias claude='~/.local/bin/claude'
 
 # tmux session selector
 function ts() {

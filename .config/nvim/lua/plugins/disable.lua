@@ -6,4 +6,5 @@ return {
   { "echasnovski/mini.ai", enabled = false },
   { "Bilal2453/luvit-meta", enabled = false },
   { "folke/flash.nvim", enabled = false },
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 }

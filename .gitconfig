@@ -10,3 +10,5 @@
 	root = ~/Documents/git
 [init]
 	defaultBranch = main
+[coderabbit]
+	machineId = cli/cb1495ae77fb43f8b1b04292df834c57

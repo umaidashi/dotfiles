@@ -42,3 +42,10 @@ local lazyterm = function()
 end
 set("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
 set("n", "<C-/>", lazyterm, { desc = "Terminal (root dir)" })
+
+-- LSP
+set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
+set("n", "gr", vim.lsp.buf.references, { desc = "Go to References" })
+set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to Implementation" })
+set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to Declaration" })
+set("n", "gy", vim.lsp.buf.type_definition, { desc = "Go to Type Definition" })

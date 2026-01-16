@@ -1,0 +1,108 @@
+[
+  {
+    "bindings": {
+      "cmd-n": ["agent::NewExternalAgentThread", { "agent": "claude_code" }]
+    }
+  },
+  {
+    "context": "VimControl && vim_mode == normal",
+    "bindings": {
+      // File explorer (neo-tree: <leader>e)
+      "space e": "project_panel::ToggleFocus",
+      // 10 lines movement (keymaps.lua: J/K)
+      "shift-j": ["workspace::SendKeystrokes", "1 0 j"],
+      "shift-k": ["workspace::SendKeystrokes", "1 0 k"],
+      // Buffer navigation (keymaps.lua: S-h/S-l)
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      // Pane navigation (keymaps.lua: C-h/j/k/l)
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      // Quit (keymaps.lua: qq)
+      "q q": "pane::CloseActiveItem",
+      // Save (keymaps.lua: <leader>w)
+      "space w": "workspace::Save",
+      // Terminal (keymaps.lua: C-/)
+      "ctrl-/": "terminal_panel::ToggleFocus",
+      // Diagnostics (editor.lua: t -> Trouble)
+      "t": "diagnostics::Deploy",
+      // Tasks (editor.lua: m -> Overseer)
+      "m": "task::Spawn",
+      // LSP: Go to definition (lspsaga.lua: gd)
+      "g d": "editor::GoToDefinition",
+      // LSP: Hover doc (lspsaga.lua: <leader>k)
+      "space k": "editor::Hover",
+      // LSP: Rename (lspsaga.lua: <leader>rn)
+      "space r n": "editor::Rename",
+      // LSP: Outline (lspsaga.lua: <leader>o)
+      "space o": "outline::Toggle",
+      // LSP: Show diagnostics (lspsaga.lua: <leader>da)
+      "space d a": "diagnostics::Deploy",
+      // Git: Copy permalink (git.lua: <leader>gy)
+      "space g y": "editor::CopyPermalinkToLine",
+      // Git: Panel (like lazygit <leader>gg)
+      "space g g": "git_panel::ToggleFocus",
+      // Git: Project diff
+      "space g D": "git::Diff",
+      // Git: Branch diff (vs main)
+      // Git: Inline blame toggle
+      "space g B": "editor::ToggleGitBlameInline",
+
+      // Telescope-like: File finder
+      "space f f": "file_finder::Toggle",
+      // Telescope-like: Grep search
+      "space f g": "pane::DeploySearch",
+      // Telescope-like: Buffer list
+      "space f b": "tab_switcher::Toggle",
+      // Project search
+      "space /": "pane::DeploySearch",
+      // Command palette
+      "space p": "command_palette::Toggle",
+
+      // LSP: Code action
+      "space c a": "editor::ToggleCodeActions",
+      // LSP: Find references
+      "g r": "editor::FindAllReferences",
+      // LSP: Go to type definition
+      "g y": "editor::GoToTypeDefinition",
+      // LSP: Go to implementation
+      "g i": "editor::GoToImplementation",
+
+      // Buffer management
+      "space b d": "pane::CloseActiveItem",
+
+      // Split panes
+      "space -": "pane::SplitDown",
+      "space \\": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "VimControl && vim_mode == insert",
+    "bindings": {
+      // Emacs-style movement (keymaps.lua)
+      "ctrl-p": "editor::MoveUp",
+      "ctrl-n": "editor::MoveDown",
+      "ctrl-b": "editor::MoveLeft",
+      "ctrl-f": "editor::MoveRight"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // Open file with 'l' (neo-tree.lua)
+      "l": "project_panel::Open"
+    }
+  },
+  {
+    "context": "Dock || Terminal",
+    "bindings": {
+      // Pane navigation from dock/terminal
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  }
+]

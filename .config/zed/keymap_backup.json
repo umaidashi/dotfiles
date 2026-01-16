@@ -1,0 +1,69 @@
+[
+  {
+    "context": "VimControl && vim_mode == normal",
+    "bindings": {
+      // File explorer (neo-tree: <leader>e)
+      "space e": "project_panel::ToggleFocus",
+      // 10 lines movement (keymaps.lua: J/K)
+      "shift-j": ["workspace::SendKeystrokes", "1 0 j"],
+      "shift-k": ["workspace::SendKeystrokes", "1 0 k"],
+      // Buffer navigation (keymaps.lua: S-h/S-l)
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      // Pane navigation (keymaps.lua: C-h/j/k/l)
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      // Quit (keymaps.lua: qq)
+      "q q": "pane::CloseActiveItem",
+      // Save (keymaps.lua: <leader>w)
+      "space w": "workspace::Save",
+      // Terminal (keymaps.lua: C-/)
+      "ctrl-/": "terminal_panel::ToggleFocus",
+      // Diagnostics (editor.lua: t -> Trouble)
+      "t": "diagnostics::Deploy",
+      // Tasks (editor.lua: m -> Overseer)
+      "m": "task::Spawn",
+      // LSP: Go to definition (lspsaga.lua: gd)
+      "g d": "editor::GoToDefinition",
+      // LSP: Hover doc (lspsaga.lua: <leader>k)
+      "space k": "editor::Hover",
+      // LSP: Rename (lspsaga.lua: <leader>rn)
+      "space r n": "editor::Rename",
+      // LSP: Outline (lspsaga.lua: <leader>o)
+      "space o": "outline::Toggle",
+      // LSP: Show diagnostics (lspsaga.lua: <leader>da)
+      "space d a": "diagnostics::Deploy",
+      // Git: Copy permalink (git.lua: <leader>gy)
+      "space g y": "editor::CopyPermalinkToLine"
+    }
+  },
+  {
+    "context": "VimControl && vim_mode == insert",
+    "bindings": {
+      // Emacs-style movement (keymaps.lua)
+      "ctrl-p": "editor::MoveUp",
+      "ctrl-n": "editor::MoveDown",
+      "ctrl-b": "editor::MoveLeft",
+      "ctrl-f": "editor::MoveRight"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // Open file with 'l' (neo-tree.lua)
+      "l": "project_panel::Open"
+    }
+  },
+  {
+    "context": "Dock || Terminal",
+    "bindings": {
+      // Pane navigation from dock/terminal
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  }
+]
